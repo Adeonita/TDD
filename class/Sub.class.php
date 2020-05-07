@@ -1,5 +1,5 @@
 <?php
-    class Sum{
+    class Sub{
 
         private $num1;
         private $num2;
@@ -20,9 +20,8 @@
             return $this->num2;
         }
 
-        public function soma(){
-            return $this->num1 + $this->num2;
+        public function subtracao(){
+            return $this->num1 - $this->num2;
         }
     }
-    
 ?>

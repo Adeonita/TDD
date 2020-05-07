@@ -1,7 +1,17 @@
 <?php
-    require_once('../classTest/testSum.php');
+    require_once('../classTest/testOperations.php');
     
-    $tSum = new testSum();
-    $tot =  $tSum->testSum();
-    echo $tot;
+    $test = new testOperations();
+    
+    $reflection = new ReflectionClass($test);
+    $reflectionMethods =  array_column($reflection->getMethods(), 'name');
+
+    foreach($reflectionMethods as $rM){
+        if($test->$rM() == 1){
+            print "Teste $rm: Bem Sucedido! <br>";
+        }else{
+            print "Teste $rm: Mal Sucedido! <br>";
+        }
+    }
+  
 ?>
