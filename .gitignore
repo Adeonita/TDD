@@ -1,0 +1,9 @@
+###Composer
+/vendor/
+
+###phpUnit
+/app/phpunit.xml
+/phpunit.xml
+
+###Build data
+/build/
